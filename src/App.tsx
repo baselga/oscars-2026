@@ -16,16 +16,16 @@ function App() {
           </h1>
           <div className="flex flex-wrap gap-4 items-center justify-center">
             <div className="rounded-lg overflow-hidden">
-              <img src="/players/antonio.jpeg" alt="Antonio" width={120} height={120} className="aspect-square" />
+              <img src="players/antonio.jpeg" alt="Antonio" width={120} height={120} className="aspect-square" />
             </div>
             <div className="rounded-lg overflow-hidden">
-              <img src="/players/tonyi.jpeg" alt="Toñi" width={120} height={120} className="aspect-square" />
+              <img src="players/tonyi.jpeg" alt="Toñi" width={120} height={120} className="aspect-square" />
             </div>
             <div className="rounded-lg overflow-hidden">
-              <img src="/players/ruth.jpeg" alt="Ruth" width={120} height={120} className="aspect-square" />
+              <img src="players/ruth.jpeg" alt="Ruth" width={120} height={120} className="aspect-square" />
             </div>
             <div className="rounded-lg overflow-hidden">
-              <img src="/players/sara.jpeg" alt="Sara" width={120} height={120} className="aspect-square" />  
+              <img src="players/sara.jpeg" alt="Sara" width={120} height={120} className="aspect-square" />  
             </div>
           </div>
           <Countdown />

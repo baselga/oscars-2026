@@ -41,7 +41,7 @@ export const CategoryBox = ({ category }: { category: Category }) => {
           >                      
             <div className="h-40 aspect-3-4 relative border border-amber-600 rounded-sm">
               <img
-                src={nomination.img || "/placeholder.png"} 
+                src={nomination.img || "placeholder.png"} 
                 alt={title || info || "Nominación"}  
                 className="inline-block mr-2 rounded h-full w-full object-cover object-top" 
               />
