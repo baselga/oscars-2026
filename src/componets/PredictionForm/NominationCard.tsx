@@ -61,7 +61,7 @@ export const NominationCard = ({
               nomination.song ||
               "Nominación"
             }
-            className="w-16 h-16 rounded-lg object-cover shrink-0"
+            className="w-14 h-20 rounded-lg object-cover shrink-0 object-top"
           />
         )}
         <NominationDetails nomination={nomination} />

@@ -56,7 +56,7 @@ export const PredictionModal = ({
       onClick={handleBackdropClick}
     >
       <div
-        className="bg-white rounded-lg shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto"
+        className="bg-white rounded-lg shadow-2xl max-w-2xl w-full max-h-[95vh] overflow-y-auto"
         onClick={handleModalClick}
       >
         {/* Header and Progress Bar Container */}
