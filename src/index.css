@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+
+@theme inline {
+  --aspect-3-4:  3 / 4;
+}
