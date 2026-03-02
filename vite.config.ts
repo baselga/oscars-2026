@@ -16,10 +16,9 @@ export default defineConfig(({ command }) => {
     
   };
 
-  console.log("Vite command:", command);
   if (command === "build") {
     config.base = "/oscars-2026/";
   }
-  console.log("Vite config:", config);
+
   return config;
 });
