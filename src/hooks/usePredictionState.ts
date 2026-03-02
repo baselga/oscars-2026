@@ -13,12 +13,12 @@ export const usePredictionState = () => {
   const [currentStep, setCurrentStep] = useState(0);
   const [predictions, setPredictions] = useState<Prediction[]>([]);
   const [copied, setCopied] = useState(false);
+  const [isCompleted, setIsCompleted] = useState(false);
 
   const categories = oscars2026Nominations.categories;
   const currentCategory = categories[currentStep];
   const isLastStep = currentStep === categories.length - 1;
   const isFirstStep = currentStep === 0;
-  const isCompleted = isLastStep && predictions.length === categories.length;
 
   const currentPrediction = predictions.find(
     (p) => p.categoryId === currentCategory.id
@@ -35,6 +35,7 @@ export const usePredictionState = () => {
     setCurrentStep(0);
     setPredictions([]);
     setCopied(false);
+    setIsCompleted(false);
   }, []);
 
   const selectWinner = useCallback(
@@ -53,7 +54,9 @@ export const usePredictionState = () => {
   );
 
   const goNext = useCallback(() => {
-    if (!isLastStep) {
+    if (isLastStep) {
+      setIsCompleted(true);
+    } else {
       setCurrentStep((prev) => prev + 1);
     }
   }, [isLastStep]);

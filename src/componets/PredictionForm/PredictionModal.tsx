@@ -88,7 +88,7 @@ export const PredictionModal = ({
             onPrevious={onPrev}
             onNext={onNext}
             isPreviousDisabled={isFirstStep}
-            isNextDisabled={isLastStep || !currentPrediction}
+            isNextDisabled={!currentPrediction}
             isLastStep={isLastStep}
           />
         )}
