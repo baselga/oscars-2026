@@ -1,22 +1,16 @@
-interface ModalFooterProps {
-  onPrevious: () => void;
-  onNext: () => void;
-  isPreviousDisabled: boolean;
-  isNextDisabled: boolean;
-  isLastStep: boolean;
-}
+import { usePredictions } from "../../hooks/usePredictions";
 
-export const ModalFooter = ({
-  onPrevious,
-  onNext,
-  isPreviousDisabled,
-  isNextDisabled,
-  isLastStep,
-}: ModalFooterProps) => {
+export const ModalFooter = () => {
+  const { goPrev, goNext, isFirstStep, currentPrediction, isLastStep } =
+    usePredictions();
+
+  const isPreviousDisabled = isFirstStep;
+  const isNextDisabled = !currentPrediction;
+
   return (
     <div className="bg-gray-100 p-6 flex gap-3 sticky bottom-0">
       <button
-        onClick={onPrevious}
+        onClick={goPrev}
         disabled={isPreviousDisabled}
         className={`flex-1 font-bold py-3 px-6 rounded-lg transition-all duration-200 ${
           isPreviousDisabled
@@ -27,7 +21,7 @@ export const ModalFooter = ({
         Anterior
       </button>
       <button
-        onClick={onNext}
+        onClick={goNext}
         disabled={isNextDisabled}
         className={`flex-1 font-bold py-3 px-6 rounded-lg transition-all duration-200 ${
           isNextDisabled

@@ -1,14 +1,8 @@
-interface ModalHeaderProps {
-  currentStep: number;
-  totalSteps: number;
-  onClose: () => void;
-}
+import { usePredictions } from "../../hooks/usePredictions";
 
-export const ModalHeader = ({
-  currentStep,
-  totalSteps,
-  onClose,
-}: ModalHeaderProps) => {
+export const ModalHeader = () => {
+  const { currentStep, totalSteps, closeModal } = usePredictions();
+
   return (
     <div className="bg-linear-to-r from-amber-300 to-yellow-600 py-2 px-6 flex justify-between items-center">
       <div>
@@ -20,7 +14,7 @@ export const ModalHeader = ({
         </p>
       </div>
       <button
-        onClick={onClose}
+        onClick={closeModal}
         className="text-amber-900 hover:text-amber-700 text-2xl font-bold transition-colors"
         aria-label="Cerrar"
       >

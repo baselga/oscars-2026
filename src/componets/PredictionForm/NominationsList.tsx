@@ -1,30 +1,23 @@
-import type { Category, Nomination } from "../../data";
 import { NominationCard } from "./NominationCard";
+import { usePredictions } from "../../hooks/usePredictions";
 
-interface NominationsListProps {
-  category: Category;
-  selectedNomination: Nomination | undefined;
-  onSelectNomination: (nomination: Nomination) => void;
-}
+export const NominationsList = () => {
+  const { currentCategory, currentPrediction, selectWinner } =
+    usePredictions();
 
-export const NominationsList = ({
-  category,
-  selectedNomination,
-  onSelectNomination,
-}: NominationsListProps) => {
   return (
     <div>
       <h3 className="text-xl font-bold text-gray-800 mb-6">
-        {category.name}
+        {currentCategory.name}
       </h3>
 
       <div className="space-y-3 mb-8">
-        {category.nominations.map((nomination) => (
+        {currentCategory.nominations.map((nomination) => (
           <NominationCard
             key={nomination.slug}
             nomination={nomination}
-            isSelected={selectedNomination?.slug === nomination.slug}
-            onClick={onSelectNomination}
+            isSelected={currentPrediction?.slug === nomination.slug}
+            onClick={selectWinner}
           />
         ))}
       </div>
