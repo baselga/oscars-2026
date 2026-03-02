@@ -4,7 +4,6 @@ import { oscars2026Nominations } from "../data";
 
 interface Prediction {
   categoryId: string;
-  categoryName: string;
   slug: string;
 }
 
@@ -45,7 +44,6 @@ export const usePredictionState = () => {
       );
       newPredictions.push({
         categoryId: currentCategory.id,
-        categoryName: currentCategory.name,
         slug: nomination.slug,
       });
       setPredictions(newPredictions);
@@ -69,7 +67,7 @@ export const usePredictionState = () => {
 
   const copyToClipboard = useCallback(async () => {
     const predictionsToExport = predictions.map((p) => ({
-      category: p.categoryName,
+      category: p.categoryId,
       slug: p.slug,
     }));
     const jsonString = JSON.stringify(predictionsToExport, null, 2);

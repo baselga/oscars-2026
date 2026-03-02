@@ -5,7 +5,6 @@ import type { Nomination, Category } from "../data";
 
 interface Prediction {
   categoryId: string;
-  categoryName: string;
   slug: string;
 }
 
