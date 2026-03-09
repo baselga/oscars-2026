@@ -42,29 +42,29 @@ export const Countdown = () => {
 
   return (
     <div className="p-8 text-center">
-      <div className="flex justify-center gap-4 flex-wrap">
-        <div className="bg-black bg-opacity-50 rounded-lg p-4 min-w-20">
-          <div className="text-white text-4xl font-bold">
+      <div className="flex justify-center gap-4">
+        <div className="bg-black bg-opacity-50 rounded-lg p-2 min-w-20">
+          <div className="text-white text-2xl font-bold">
             {String(timeRemaining.days).padStart(2, "0")}
           </div>
           <div className="text-amber-300 text-sm font-semibold mt-2">Días</div>
         </div>
-        <div className="bg-black bg-opacity-50 rounded-lg p-4 min-w-20">
-          <div className="text-white text-4xl font-bold">
+        <div className="bg-black bg-opacity-50 rounded-lg p-2 min-w-20">
+          <div className="text-white text-2xl font-bold">
             {String(timeRemaining.hours).padStart(2, "0")}
           </div>
           <div className="text-amber-300 text-sm font-semibold mt-2">Horas</div>
         </div>
-        <div className="bg-black bg-opacity-50 rounded-lg p-4 min-w-20">
-          <div className="text-white text-4xl font-bold">
+        <div className="bg-black bg-opacity-50 rounded-lg p-2 min-w-20">
+          <div className="text-white text-2xl font-bold">
             {String(timeRemaining.minutes).padStart(2, "0")}
           </div>
           <div className="text-amber-300 text-sm font-semibold mt-2">
             Minutos
           </div>
         </div>
-        <div className="bg-black bg-opacity-50 rounded-lg p-4 min-w-20">
-          <div className="text-white text-4xl font-bold">
+        <div className="bg-black bg-opacity-50 rounded-lg p-2 min-w-20">
+          <div className="text-white text-2xl font-bold">
             {String(timeRemaining.seconds).padStart(2, "0")}
           </div>
           <div className="text-amber-300 text-sm font-semibold mt-2">
