@@ -1,6 +1,8 @@
 import { Countdown } from "./componets/Countdown";
 import { HeaderPage } from "./componets/HeaderPage";
 import { PredictionForm } from "./componets/PredictionForm";
+import { PoolResult } from "./componets/PoolResult";
+import oscars2026Nominations, { players } from "./data";
 
 function App() {
   return (
@@ -16,23 +18,51 @@ function App() {
           </h1>
           <div className="flex flex-wrap gap-4 items-center justify-center">
             <div className="rounded-lg overflow-hidden">
-              <img src="players/antonio.avif" alt="Antonio" width={120} height={120} className="aspect-square" />
+              <img
+                src="players/antonio.avif"
+                alt="Antonio"
+                width={120}
+                height={120}
+                className="aspect-square"
+              />
             </div>
             <div className="rounded-lg overflow-hidden">
-              <img src="players/tonyi.avif" alt="Toñi" width={120} height={120} className="aspect-square" />
+              <img
+                src="players/tonyi.avif"
+                alt="Toñi"
+                width={120}
+                height={120}
+                className="aspect-square"
+              />
             </div>
             <div className="rounded-lg overflow-hidden">
-              <img src="players/ruth.avif" alt="Ruth" width={120} height={120} className="aspect-square" />
+              <img
+                src="players/ruth.avif"
+                alt="Ruth"
+                width={120}
+                height={120}
+                className="aspect-square"
+              />
             </div>
             <div className="rounded-lg overflow-hidden">
-              <img src="players/sara.avif" alt="Sara" width={120} height={120} className="aspect-square" />  
+              <img
+                src="players/sara.avif"
+                alt="Sara"
+                width={120}
+                height={120}
+                className="aspect-square"
+              />
             </div>
           </div>
           <Countdown />
           <div className="flex justify-center">
             <PredictionForm />
           </div>
-          {/* <Nominations /> */}
+        </div>
+
+        <div className="max-w-6xl w-full mx-auto mt-8 pb-10">
+          {players.length ===
+            Object.keys(oscars2026Nominations.pool).length && <PoolResult />}
         </div>
       </div>
     </div>
