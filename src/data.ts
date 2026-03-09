@@ -4,6 +4,7 @@ export type OscarsData = {
   ceremonyDate: string;
   source: string;
   categories: Category[];
+  pool: Record<string, { category: string; slug: string }[]>;
 };
 
 export type Category = {
@@ -22,6 +23,35 @@ export type Nomination = {
   setDecoration?: string;
   slug: string;
 };
+
+export type Player = {
+  id: string;
+  name: string;
+  img: string;
+};
+
+export const players: Player[] = [
+  {
+    id: "antonio",
+    name: "Antonio",
+    img: "players/antonio.avif",
+  },
+  {
+    id: "tonyi",
+    name: "Toñi",
+    img: "players/tonyi.avif",
+  },
+  {
+    id: "ruth",
+    name: "Ruth",
+    img: "players/ruth.avif",
+  },
+  {
+    id: "sara",
+    name: "Sara",
+    img: "players/sara.avif",
+  },
+] as const;
 
 export const oscars2026Nominations: OscarsData = {
   edition: 98,
@@ -835,6 +865,400 @@ export const oscars2026Nominations: OscarsData = {
       ],
     },
   ],
+  pool: {
+    antonio: [
+      {
+        category: "best-picture",
+        slug: "una-batalla-tras-otra",
+      },
+      {
+        category: "best-directing",
+        slug: "ryan-coogler",
+      },
+      {
+        category: "best-actor",
+        slug: "michael-b-jordan",
+      },
+      {
+        category: "best-actress",
+        slug: "jessie-buckley",
+      },
+      {
+        category: "best-supporting-actor",
+        slug: "delroy-lindo",
+      },
+      {
+        category: "best-supporting-actress",
+        slug: "elle-fanning",
+      },
+      {
+        category: "best-original-screenplay",
+        slug: "valor-sentimental",
+      },
+      {
+        category: "best-adapted-screenplay",
+        slug: "suenos-de-trenes",
+      },
+      {
+        category: "best-animated-feature",
+        slug: "las-guerreras-k-pop",
+      },
+      {
+        category: "best-international-feature",
+        slug: "valor-sentimental",
+      },
+      {
+        category: "best-documentary-feature",
+        slug: "alabama-presos-del-sistema",
+      },
+      {
+        category: "best-documentary-short",
+        slug: "armed-only-with-a-camera-the-life-and-death-of-brent-renaud",
+      },
+      {
+        category: "best-live-action-short",
+        slug: "the-singers",
+      },
+      {
+        category: "best-animated-short",
+        slug: "forevergreen",
+      },
+      {
+        category: "best-original-score",
+        slug: "sinners",
+      },
+      {
+        category: "best-original-song",
+        slug: "golden",
+      },
+      {
+        category: "best-casting",
+        slug: "una-batalla-tras-otra",
+      },
+      {
+        category: "best-sound",
+        slug: "sirat",
+      },
+      {
+        category: "best-production-design",
+        slug: "sinners",
+      },
+      {
+        category: "best-cinematography",
+        slug: "suenos-de-trenes",
+      },
+      {
+        category: "best-makeup-hairstyling",
+        slug: "sinners",
+      },
+      {
+        category: "best-costume-design",
+        slug: "hamnet",
+      },
+      {
+        category: "best-film-editing",
+        slug: "una-batalla-tras-otra",
+      },
+      {
+        category: "best-visual-effects",
+        slug: "sinners",
+      },
+    ],
+    tonyi: [
+      {
+        category: "best-picture",
+        slug: "hamnet",
+      },
+      {
+        category: "best-directing",
+        slug: "paul-thomas-anderson",
+      },
+      {
+        category: "best-actor",
+        slug: "michael-b-jordan",
+      },
+      {
+        category: "best-actress",
+        slug: "jessie-buckley",
+      },
+      {
+        category: "best-supporting-actor",
+        slug: "benicio-del-toro",
+      },
+      {
+        category: "best-supporting-actress",
+        slug: "teyana-taylor",
+      },
+      {
+        category: "best-original-screenplay",
+        slug: "sinners",
+      },
+      {
+        category: "best-adapted-screenplay",
+        slug: "hamnet",
+      },
+      {
+        category: "best-animated-feature",
+        slug: "elio",
+      },
+      {
+        category: "best-international-feature",
+        slug: "sirat",
+      },
+      {
+        category: "best-documentary-feature",
+        slug: "alabama-presos-del-sistema",
+      },
+      {
+        category: "best-documentary-short",
+        slug: "armed-only-with-a-camera-the-life-and-death-of-brent-renaud",
+      },
+      {
+        category: "best-live-action-short",
+        slug: "the-singers",
+      },
+      {
+        category: "best-animated-short",
+        slug: "the-girl-who-cried-pearls",
+      },
+      {
+        category: "best-original-score",
+        slug: "sinners",
+      },
+      {
+        category: "best-original-song",
+        slug: "golden",
+      },
+      {
+        category: "best-casting",
+        slug: "una-batalla-tras-otra",
+      },
+      {
+        category: "best-sound",
+        slug: "sirat",
+      },
+      {
+        category: "best-production-design",
+        slug: "frankenstein",
+      },
+      {
+        category: "best-cinematography",
+        slug: "frankenstein",
+      },
+      {
+        category: "best-makeup-hairstyling",
+        slug: "sinners",
+      },
+      {
+        category: "best-costume-design",
+        slug: "avatar-fire-and-ash",
+      },
+      {
+        category: "best-film-editing",
+        slug: "sinners",
+      },
+      {
+        category: "best-visual-effects",
+        slug: "avatar-fire-and-ash",
+      },
+    ],
+    ruth: [
+      {
+        category: "best-picture",
+        slug: "una-batalla-tras-otra",
+      },
+      {
+        category: "best-directing",
+        slug: "ryan-coogler",
+      },
+      {
+        category: "best-actor",
+        slug: "michael-b-jordan",
+      },
+      {
+        category: "best-actress",
+        slug: "jessie-buckley",
+      },
+      {
+        category: "best-supporting-actor",
+        slug: "delroy-lindo",
+      },
+      {
+        category: "best-supporting-actress",
+        slug: "elle-fanning",
+      },
+      {
+        category: "best-original-screenplay",
+        slug: "valor-sentimental",
+      },
+      {
+        category: "best-adapted-screenplay",
+        slug: "suenos-de-trenes",
+      },
+      {
+        category: "best-animated-feature",
+        slug: "las-guerreras-k-pop",
+      },
+      {
+        category: "best-international-feature",
+        slug: "valor-sentimental",
+      },
+      {
+        category: "best-documentary-feature",
+        slug: "alabama-presos-del-sistema",
+      },
+      {
+        category: "best-documentary-short",
+        slug: "armed-only-with-a-camera-the-life-and-death-of-brent-renaud",
+      },
+      {
+        category: "best-live-action-short",
+        slug: "the-singers",
+      },
+      {
+        category: "best-animated-short",
+        slug: "forevergreen",
+      },
+      {
+        category: "best-original-score",
+        slug: "sinners",
+      },
+      {
+        category: "best-original-song",
+        slug: "golden",
+      },
+      {
+        category: "best-casting",
+        slug: "una-batalla-tras-otra",
+      },
+      {
+        category: "best-sound",
+        slug: "sirat",
+      },
+      {
+        category: "best-production-design",
+        slug: "sinners",
+      },
+      {
+        category: "best-cinematography",
+        slug: "suenos-de-trenes",
+      },
+      {
+        category: "best-makeup-hairstyling",
+        slug: "sinners",
+      },
+      {
+        category: "best-costume-design",
+        slug: "hamnet",
+      },
+      {
+        category: "best-film-editing",
+        slug: "una-batalla-tras-otra",
+      },
+      {
+        category: "best-visual-effects",
+        slug: "sinners",
+      },
+    ],
+    sara: [
+      {
+        category: "best-picture",
+        slug: "hamnet",
+      },
+      {
+        category: "best-directing",
+        slug: "paul-thomas-anderson",
+      },
+      {
+        category: "best-actor",
+        slug: "michael-b-jordan",
+      },
+      {
+        category: "best-actress",
+        slug: "jessie-buckley",
+      },
+      {
+        category: "best-supporting-actor",
+        slug: "benicio-del-toro",
+      },
+      {
+        category: "best-supporting-actress",
+        slug: "teyana-taylor",
+      },
+      {
+        category: "best-original-screenplay",
+        slug: "sinners",
+      },
+      {
+        category: "best-adapted-screenplay",
+        slug: "hamnet",
+      },
+      {
+        category: "best-animated-feature",
+        slug: "elio",
+      },
+      {
+        category: "best-international-feature",
+        slug: "sirat",
+      },
+      {
+        category: "best-documentary-feature",
+        slug: "alabama-presos-del-sistema",
+      },
+      {
+        category: "best-documentary-short",
+        slug: "armed-only-with-a-camera-the-life-and-death-of-brent-renaud",
+      },
+      {
+        category: "best-live-action-short",
+        slug: "the-singers",
+      },
+      {
+        category: "best-animated-short",
+        slug: "the-girl-who-cried-pearls",
+      },
+      {
+        category: "best-original-score",
+        slug: "sinners",
+      },
+      {
+        category: "best-original-song",
+        slug: "golden",
+      },
+      {
+        category: "best-casting",
+        slug: "una-batalla-tras-otra",
+      },
+      {
+        category: "best-sound",
+        slug: "sirat",
+      },
+      {
+        category: "best-production-design",
+        slug: "frankenstein",
+      },
+      {
+        category: "best-cinematography",
+        slug: "frankenstein",
+      },
+      {
+        category: "best-makeup-hairstyling",
+        slug: "sinners",
+      },
+      {
+        category: "best-costume-design",
+        slug: "avatar-fire-and-ash",
+      },
+      {
+        category: "best-film-editing",
+        slug: "sinners",
+      },
+      {
+        category: "best-visual-effects",
+        slug: "avatar-fire-and-ash",
+      },
+    ],
+  },
 };
 
 export default oscars2026Nominations;
