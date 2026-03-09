@@ -1,7 +1,7 @@
-import { Countdown } from "./componets/Countdown";
-import { HeaderPage } from "./componets/HeaderPage";
-import { PredictionForm } from "./componets/PredictionForm";
-import { PoolResult } from "./componets/PoolResult";
+import { Countdown } from "./components/Countdown";
+import { HeaderPage } from "./components/HeaderPage";
+import { PredictionForm } from "./components/PredictionForm";
+import { PoolResult } from "./components/PoolResult";
 import oscars2026Nominations, { players } from "./data";
 
 function App() {
