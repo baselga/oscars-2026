@@ -1,6 +1,6 @@
-import { Countdown } from "./components/Countdown";
+// import { Countdown } from "./components/Countdown";
 import { HeaderPage } from "./components/HeaderPage";
-import { PredictionForm } from "./components/PredictionForm";
+// import { PredictionForm } from "./components/PredictionForm";
 import { PoolResult } from "./components/PoolResult";
 import oscars2026Nominations, { players } from "./data";
 
@@ -29,10 +29,10 @@ function App() {
               </div>
             ))}
           </div>
-          <Countdown />
+          {/* <Countdown />
           <div className="flex justify-center">
             <PredictionForm />
-          </div>
+          </div> */}
         </div>
 
         <div className="max-w-6xl w-full mx-auto mt-8 pb-10">

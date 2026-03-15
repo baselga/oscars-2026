@@ -1062,6 +1062,202 @@ export const oscars2026Nominations: OscarsData = {
         slug: "avatar-fire-and-ash",
       },
     ],
+    ruth: [
+      {
+        category: "best-picture",
+        slug: "hamnet",
+      },
+      {
+        category: "best-directing",
+        slug: "chloe-zhao",
+      },
+      {
+        category: "best-actor",
+        slug: "michael-b-jordan",
+      },
+      {
+        category: "best-actress",
+        slug: "jessie-buckley",
+      },
+      {
+        category: "best-supporting-actor",
+        slug: "sean-penn",
+      },
+      {
+        category: "best-supporting-actress",
+        slug: "amy-madigan",
+      },
+      {
+        category: "best-original-screenplay",
+        slug: "sinners",
+      },
+      {
+        category: "best-adapted-screenplay",
+        slug: "hamnet",
+      },
+      {
+        category: "best-animated-feature",
+        slug: "las-guerreras-k-pop",
+      },
+      {
+        category: "best-international-feature",
+        slug: "valor-sentimental",
+      },
+      {
+        category: "best-documentary-feature",
+        slug: "la-vecina-perfecta",
+      },
+      {
+        category: "best-documentary-short",
+        slug: "all-the-empty-rooms",
+      },
+      {
+        category: "best-live-action-short",
+        slug: "butchers-stain",
+      },
+      {
+        category: "best-animated-short",
+        slug: "the-girl-who-cried-pearls",
+      },
+      {
+        category: "best-original-score",
+        slug: "sinners",
+      },
+      {
+        category: "best-original-song",
+        slug: "golden",
+      },
+      {
+        category: "best-casting",
+        slug: "una-batalla-tras-otra",
+      },
+      {
+        category: "best-sound",
+        slug: "una-batalla-tras-otra",
+      },
+      {
+        category: "best-production-design",
+        slug: "una-batalla-tras-otra",
+      },
+      {
+        category: "best-cinematography",
+        slug: "frankenstein",
+      },
+      {
+        category: "best-makeup-hairstyling",
+        slug: "frankenstein",
+      },
+      {
+        category: "best-costume-design",
+        slug: "frankenstein",
+      },
+      {
+        category: "best-film-editing",
+        slug: "una-batalla-tras-otra",
+      },
+      {
+        category: "best-visual-effects",
+        slug: "avatar-fire-and-ash",
+      },
+    ],
+    sara: [
+      {
+        category: "best-picture",
+        slug: "sinners",
+      },
+      {
+        category: "best-directing",
+        slug: "chloe-zhao",
+      },
+      {
+        category: "best-actor",
+        slug: "michael-b-jordan",
+      },
+      {
+        category: "best-actress",
+        slug: "jessie-buckley",
+      },
+      {
+        category: "best-supporting-actor",
+        slug: "stellan-skarsgard",
+      },
+      {
+        category: "best-supporting-actress",
+        slug: "wunmi-mosaku",
+      },
+      {
+        category: "best-original-screenplay",
+        slug: "sinners",
+      },
+      {
+        category: "best-adapted-screenplay",
+        slug: "hamnet",
+      },
+      {
+        category: "best-animated-feature",
+        slug: "little-amelie-or-the-character-of-rain",
+      },
+      {
+        category: "best-international-feature",
+        slug: "valor-sentimental",
+      },
+      {
+        category: "best-documentary-feature",
+        slug: "alabama-presos-del-sistema",
+      },
+      {
+        category: "best-documentary-short",
+        slug: "armed-only-with-a-camera-the-life-and-death-of-brent-renaud",
+      },
+      {
+        category: "best-live-action-short",
+        slug: "a-friend-of-dorothy",
+      },
+      {
+        category: "best-animated-short",
+        slug: "butterfly",
+      },
+      {
+        category: "best-original-score",
+        slug: "hamnet",
+      },
+      {
+        category: "best-original-song",
+        slug: "golden",
+      },
+      {
+        category: "best-casting",
+        slug: "hamnet",
+      },
+      {
+        category: "best-sound",
+        slug: "sirat",
+      },
+      {
+        category: "best-production-design",
+        slug: "sinners",
+      },
+      {
+        category: "best-cinematography",
+        slug: "suenos-de-trenes",
+      },
+      {
+        category: "best-makeup-hairstyling",
+        slug: "frankenstein",
+      },
+      {
+        category: "best-costume-design",
+        slug: "sinners",
+      },
+      {
+        category: "best-film-editing",
+        slug: "sinners",
+      },
+      {
+        category: "best-visual-effects",
+        slug: "avatar-fire-and-ash",
+      },
+    ],
   },
 };
 
