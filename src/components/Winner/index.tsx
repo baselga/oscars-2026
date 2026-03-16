@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import confetti from "canvas-confetti";
 import oscars2026Nominations, { players } from "../../data";
 
 const calculatePlayerScore = (playerId: string): number => {
@@ -31,11 +33,56 @@ export const Winner = () => {
   // Encontrar la puntuación máxima
   const maxScore = Math.max(...playersWithScores.map((p) => p.score));
 
-  // Si nadie tiene puntos, no mostrar nada
-  if (maxScore === 0) return null;
-
   // Filtrar los jugadores con la puntuación máxima
   const winners = playersWithScores.filter((p) => p.score === maxScore);
+
+  // Efecto de confetis cuando hay ganadores
+  useEffect(() => {
+    if (winners.length > 0 && maxScore > 0) {
+      // Lanzar confetis dorados al estilo Oscar
+      const duration = 3000;
+      const animationEnd = Date.now() + duration;
+      const defaults = {
+        startVelocity: 30,
+        spread: 360,
+        ticks: 60,
+        zIndex: 0,
+        colors: ["#FFD700", "#FFA500", "#FFFF00", "#FFE873", "#FFC300"],
+      };
+
+      const randomInRange = (min: number, max: number) => {
+        return Math.random() * (max - min) + min;
+      };
+
+      const interval = setInterval(() => {
+        const timeLeft = animationEnd - Date.now();
+
+        if (timeLeft <= 0) {
+          clearInterval(interval);
+          return;
+        }
+
+        const particleCount = 50 * (timeLeft / duration);
+
+        // Lanzar confetis desde diferentes posiciones
+        confetti({
+          ...defaults,
+          particleCount,
+          origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
+        });
+        confetti({
+          ...defaults,
+          particleCount,
+          origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
+        });
+      }, 250);
+
+      return () => clearInterval(interval);
+    }
+  }, [winners.length, maxScore]);
+
+  // Si nadie tiene puntos, no mostrar nada
+  if (maxScore === 0) return null;
 
   return (
     <div className="mt-8">

@@ -18,8 +18,8 @@ function App() {
           <h1 className="text-amber-900 text-5xl font-bold text-center">
             Porra Oscars 2026
           </h1>
-          <Players />
           <Winner />
+          <Players />
           {/* <Countdown />
           <div className="flex justify-center">
             <PredictionForm />
