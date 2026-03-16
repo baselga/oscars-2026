@@ -1,5 +1,7 @@
 // import { Countdown } from "./components/Countdown";
 import { HeaderPage } from "./components/HeaderPage";
+import { Players } from "./components/Players";
+import { Winner } from "./components/Winner";
 // import { PredictionForm } from "./components/PredictionForm";
 import { PoolResult } from "./components/PoolResult";
 import oscars2026Nominations, { players } from "./data";
@@ -16,19 +18,8 @@ function App() {
           <h1 className="text-amber-900 text-5xl font-bold text-center">
             Porra Oscars 2026
           </h1>
-          <div className="flex flex-wrap gap-4 items-center justify-center">
-            {players.map((player) => (
-              <div key={player.id} className="rounded-lg overflow-hidden">
-                <img
-                  src={player.img}
-                  alt={player.name}
-                  width={120}
-                  height={120}
-                  className="aspect-square"
-                />
-              </div>
-            ))}
-          </div>
+          <Players />
+          <Winner />
           {/* <Countdown />
           <div className="flex justify-center">
             <PredictionForm />

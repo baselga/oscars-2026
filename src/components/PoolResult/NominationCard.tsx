@@ -38,7 +38,14 @@ export const NominationCard = ({
   const details = getNominationDetails(nomination);
 
   return (
-    <div className="rounded-lg bg-zinc-800/80 p-3 border border-zinc-700">
+    <div className={`rounded-lg p-3 border relative ${
+      nomination.winner
+        ? 'bg-amber-900/30 border-amber-400/60 shadow-amber-400/20 shadow-lg'
+        : 'bg-zinc-800/80 border-zinc-700'
+    }`}>
+      {nomination.winner && (
+        <span className="absolute top-2 right-2 text-2xl" title="Ganador">⭐</span>
+      )}
       <div className="flex gap-3">
         <img
           src={nomination.img ?? FALLBACK_NOMINATION_IMAGE}
